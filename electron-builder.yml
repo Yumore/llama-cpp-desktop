@@ -18,5 +18,20 @@ linux:
     - AppImage
     - deb
   artifactName: Llama.cpp-Desktop-${arch}.${ext}
+deb:
+  # Ubuntu 26.04 renamed these runtime packages for the 64-bit time ABI.
+  # Keep alternatives so the artifact also installs on earlier Ubuntu/Debian releases.
+  depends:
+    - libgtk-3-0 | libgtk-3-0t64
+    - libnotify4
+    - libnss3
+    - libxss1
+    - libxtst6
+    - xdg-utils
+    - libatspi2.0-0 | libatspi2.0-0t64
+    - libuuid1
+    - libsecret-1-0
+  recommends:
+    - libappindicator3-1 | libayatana-appindicator3-1
 asar: true
 compression: normal

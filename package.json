@@ -9,7 +9,8 @@
   "productName": "Llama.cpp Desktop",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --publish never"
+    "dist": "electron-builder --publish never",
+    "dist:deb": "electron-builder --linux deb --x64 --publish never"
   },
   "devDependencies": {
     "electron": "^41.1.1",

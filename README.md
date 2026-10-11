@@ -63,6 +63,14 @@ npm run dist
 
 打包产物会生成在 `dist/`，该目录不会提交到 Git。
 
+在 Ubuntu/Debian 的 amd64 主机上，如仅需生成本机安装包，可执行：
+
+```bash
+npm run dist:deb
+```
+
+该命令会生成 `dist/Llama.cpp-Desktop-amd64.deb`；包内同时兼容 Ubuntu 26.04 的 `t64` 运行库名称和较早发行版的旧名称。
+
 ## 当前限制 / Roadmap
 
 - 当前支持 Windows 10 / 11 和 Ubuntu 22.04+（通过 AppImage 或 deb 安装）。macOS 等更多平台需要继续适配。
